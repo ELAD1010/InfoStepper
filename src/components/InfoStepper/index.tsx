@@ -33,7 +33,7 @@ const InfoStepper = <TFieldValues extends FieldValues>({
 
   useEffect(() => {
     const subscription = watch((value) => {
-      const currentformValid = steps[activeStep].element.props.fields.every(
+      const currentformValid = steps[activeStep].element.props.fields?.every(
         (field: FormField<TFieldValues>) => value[field.name].length > 0
       );
 
