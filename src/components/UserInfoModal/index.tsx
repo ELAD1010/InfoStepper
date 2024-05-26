@@ -89,13 +89,15 @@ const UserInfoModal = ({ open, handleClose }: Props) => {
           <DialogContentText id="alert-dialog-slide-description">
             Please fill in your private information
           </DialogContentText>
-          <div className="stepper">
-            <InfoStepper
-              watch={watch}
-              steps={steps}
-              handleSubmit={() => submitForm()}
-            />
-          </div>
+          {open && (
+            <div className="stepper">
+              <InfoStepper
+                watch={watch}
+                steps={steps}
+                handleSubmit={() => submitForm()}
+              />
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     </div>
