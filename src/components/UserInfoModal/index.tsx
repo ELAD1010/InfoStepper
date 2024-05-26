@@ -78,7 +78,10 @@ const UserInfoModal = ({ open, handleClose }: Props) => {
         open={open}
         TransitionComponent={Transition}
         keepMounted
-        onClose={handleClose}
+        onClose={() => {
+          reset({ firstName: "", lastName: "", age: "" });
+          handleClose();
+        }}
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogTitle>Sign Up Form</DialogTitle>
