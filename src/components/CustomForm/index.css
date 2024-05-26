@@ -1,0 +1,21 @@
+.form {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form-input {
+  height: 3vh;
+  width: 10vw;
+  border: 1px solid rgb(41, 41, 41);
+  border-radius: 0.5rem;
+  padding-left: 0.5vw;
+}
+
+.form-input:focus {
+  height: 3vh;
+  width: 10vw;
+  border: 1px solid rgb(9, 140, 255);
+  border-radius: 0.5rem;
+}
